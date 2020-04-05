@@ -1,0 +1,9 @@
+<?php
+
+namespace DummyNamespace;
+
+interface DummyClassNameInterface
+{
+    public function getFoo();
+    public function setFoo($foo);
+}

@@ -12,6 +12,9 @@ class ObserverGenerator extends AbstractGenerator
     {
         $objectName = $this->getObserverName();
 
+        //////////////////////////////////////
+        /// Observer/ExampleObserver.php
+
         $dummyNamespace = $this->getNamespace('Observer\\'.$objectName);
         $className = $this->getClassName($objectName);
         $dummyFullClassName = $dummyNamespace . '\\' . $className;
@@ -19,13 +22,16 @@ class ObserverGenerator extends AbstractGenerator
         $dummyItemName = $this->convertFullClassNameInXmlName($dummyFullClassName);
 
         $template = $this->getTemplate(
-            'observer.php',
+            'observer/observer.php',
             ['DummyNamespace', 'DummyClassName'],
             [$dummyNamespace, $className]);
         $this->putTemplate($template, 'Observer/'.$objectName.'.php');
 
+        //////////////////////////////////////
+        /// etc/[AREA_CODE]/events.xml
+
         $template = $this->getTemplate(
-            'events.xml',
+            'observer/events.xml',
             ['DummyItemName', 'DummyFullClassName', 'DummyEventName'],
             [$dummyItemName, $dummyFullClassName, $this->getEventName()]
         );

@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+use Magento\Framework\DataObject;
+
+class DummyClassName extends DataObject implements \DummyInterfaceClassNameInterface
+{
+    public function setFoo($foo)
+    {
+        $this->setData('foo', $foo);
+    }
+
+    public function getFoo()
+    {
+        return (string)$this->getData('foo');
+    }
+}

@@ -10,6 +10,9 @@ class CommandGenerator extends AbstractGenerator
     {
         $commandName = $this->getCommandName();
 
+        //////////////////////////////////////
+        /// Command/ExampleCommand.php
+
         $commandNamespace = $this->getNamespace('Command\\'.$commandName);
         $className = $this->getClassName($commandName);
         $dummyFullClassName = $commandNamespace . '\\' . $className;
@@ -17,13 +20,16 @@ class CommandGenerator extends AbstractGenerator
         $dummyItemName = $this->convertFullClassNameInXmlName($dummyFullClassName);
 
         $template = $this->getTemplate(
-            'command.php',
+            'command/command.php',
             ['DummyNamespace', 'DummyClassName'],
             [$commandNamespace, $className]);
         $this->putTemplate($template, 'Command/'.$commandName.'.php');
 
+        //////////////////////////////////////
+        /// etc/di.xml
+
         $template = $this->getTemplate(
-            'di.command.xml',
+            'command/di.xml',
             ['DummyItemName', 'DummyFullClassName'],
             [$dummyItemName, $dummyFullClassName]
         );
