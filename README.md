@@ -86,3 +86,9 @@ Insert a seeder name and nothing else
 `bin/magento dna:make:data-patch VendorName_ModuleName`
 
 Insert a data patch name and nothing else
+
+### Generate a Management (or generic service)
+
+`bin/magento dna:make:management VendorName_ModuleName`
+
+Insert a Management name and nothing else

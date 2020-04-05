@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+class DummyClassName implements \DummyInterfaceClassNameInterface
+{
+    protected $foo;
+
+    public function setFoo($foo)
+    {
+        $this->foo = $foo;
+    }
+
+    public function getFoo()
+    {
+        return (string)$this->foo;
+    }
+}

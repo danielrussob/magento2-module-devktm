@@ -11,7 +11,7 @@ class DataPatchGenerator extends AbstractGenerator
         $objectName = $this->getPatchName();
 
         //////////////////////////////////////
-        /// Setup\Patch\Data\ExampleSeeder.php
+        /// Setup\Patch\Data\ExamplePatch.php
 
         $dummyNamespace = $this->getNamespace('Setup\\Patch\\Data\\'.$objectName);
         $className = $this->getClassName($objectName);
