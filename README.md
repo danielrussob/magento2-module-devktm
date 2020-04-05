@@ -23,8 +23,6 @@ eg.: bin/magento dna:make:module DNAFactory_Module001
 
 `bin/magento dna:make:command VendorName_ModuleName`
 
-then insert a command name and it will be placed under Command folder
-
 eg.: 
 
 bin/magento dna:make:command DNAFactory_Module001
@@ -34,5 +32,21 @@ eg.:
 
 bin/magento dna:make:command DNAFactory_Module001
 Foo\BarCommand => DNAFactory\Module001\Command\Foo\BarCommand
+
+... and so on!
+
+### Generate an Observer
+
+`bin/magento dna:make:observer VendorName_ModuleName`
+
+eg.: 
+
+bin/magento dna:make:observer DNAFactory_Module001
+FooObserver => DNAFactory\Module001\Observer\FooObserver
+
+eg.: 
+
+bin/magento dna:make:observer DNAFactory_Module001
+Foo\BarObserver => DNAFactory\Module001\Observer\Foo\BarObserver
 
 ... and so on!

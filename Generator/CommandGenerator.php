@@ -2,8 +2,6 @@
 
 namespace DNAFactory\DevKtm\Generator;
 
-use Magento\Framework\App\ObjectManager;
-
 class CommandGenerator extends AbstractGenerator
 {
     protected $commandName;

@@ -10,12 +10,12 @@ class DummyClassName extends Command
     protected function configure()
     {
         $this->setName("dna:change-me");
-        $this->setDescription("See www.dnafactory.it or set a cool description");
+        $this->setDescription("Set a cool description");
         parent::configure();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("Hi, mom!");
+        $output->writeln("We are hiring! See www.dnafactory.it for more info");
     }
 }

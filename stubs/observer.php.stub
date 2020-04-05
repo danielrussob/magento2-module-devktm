@@ -1,0 +1,24 @@
+<?php
+namespace DummyNamespace;
+
+use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
+use Psr\Log\LoggerInterface;
+
+class DummyClassName implements ObserverInterface
+{
+    /**
+     * @var LoggerInterface
+     */
+    protected $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+    public function execute(Observer $observer)
+    {
+        $this->logger->debug("We are hiring! See www.dnafactory.it for more info");
+    }
+}
