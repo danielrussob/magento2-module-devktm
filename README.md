@@ -50,3 +50,21 @@ bin/magento dna:make:observer DNAFactory_Module001
 Foo\BarObserver => DNAFactory\Module001\Observer\Foo\BarObserver
 
 ... and so on!
+
+### Generate a Data Object
+
+`bin/magento dna:make:data-object VendorName_ModuleName`
+
+eg.: 
+
+bin/magento dna:make:data-object DNAFactory_Module001
+Foo => DNAFactory\Module001\Api\Data\FooInterface
+        DNAFactory\Module001\Data\Foo
+
+eg.: 
+
+bin/magento dna:make:data-object DNAFactory_Module001
+Foo\Bar => DNAFactory\Module001\Api\Data\Foo\BarInterface
+        DNAFactory\Module001\Data\Foo\Bar
+
+... and so on!
