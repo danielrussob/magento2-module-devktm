@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="VENDOR_NAMESPACE::acl_here" title="ACL here?" sortOrder="10">
+                    <resource id="VENDOR_NAMESPACE::acl_child_1" title="Child 1" sortOrder="10"/>
+                    <resource id="VENDOR_NAMESPACE::acl_child_2" title="Child 2" sortOrder="20"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

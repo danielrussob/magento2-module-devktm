@@ -12,7 +12,8 @@
                 <item name="dnafactory_ktm_command_generatedbschema" xsi:type="object">DNAFactory\DevKtm\Command\DbSchemaGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generateseeder" xsi:type="object">DNAFactory\DevKtm\Command\SeederGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generatedatapatch" xsi:type="object">DNAFactory\DevKtm\Command\DataPatchGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatedmanagement" xsi:type="object">DNAFactory\DevKtm\Command\ManagementGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatemanagement" xsi:type="object">DNAFactory\DevKtm\Command\ManagementGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generateconfiguration" xsi:type="object">DNAFactory\DevKtm\Command\ConfigurationGeneratorCommand</item>
             </argument>
         </arguments>
     </type>

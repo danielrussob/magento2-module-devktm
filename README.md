@@ -98,3 +98,11 @@ Insert a data patch name and nothing else
 `bin/magento dna:make:management VendorName_ModuleName`
 
 Insert a Management name and nothing else
+
+### Generate a Configuration
+
+`bin/magento dna:make:configuration VendorName_ModuleName`
+
+Insert a Configuration name and nothing else
+
+Plus: service contrat + acl + config.xml
