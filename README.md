@@ -80,3 +80,9 @@ Insert a table name and nothing else
 `bin/magento dna:make:seeder VendorName_ModuleName`
 
 Insert a seeder name and nothing else
+
+### Generate a Data Patch (class that modify stuff in database)
+
+`bin/magento dna:make:data-patch VendorName_ModuleName`
+
+Insert a data patch name and nothing else
