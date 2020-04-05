@@ -1,5 +1,3 @@
-- database
-- seeder
 - data patch
 - eav
 - triad

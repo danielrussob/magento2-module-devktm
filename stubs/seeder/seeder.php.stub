@@ -1,0 +1,41 @@
+<?php
+
+namespace DummyNamespace;
+
+use Magento\Framework\Setup\Patch\DataPatchInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+
+class DummyClassName implements DataPatchInterface
+{
+    protected $moduleDataSetup;
+
+    public function __construct(ModuleDataSetupInterface $moduleDataSetup)
+    {
+        $this->moduleDataSetup = $moduleDataSetup;
+    }
+
+    public static function getDependencies()
+    {
+        return [];
+    }
+
+    public function getAliases()
+    {
+        return [];
+    }
+
+    public function apply()
+    {
+        $this->moduleDataSetup->getConnection()->startSetup();
+
+        $table = $this->moduleDataSetup->getTable('www_dnafactory_it');
+
+        $this->moduleDataSetup->getConnection()
+            ->insert($table, ['message' => 'we are hiring']);
+
+        $this->moduleDataSetup->getConnection()
+            ->insert($table, ['message' => 'see www.dnafactory.it']);
+
+        $this->moduleDataSetup->getConnection()->endSetup();
+    }
+}

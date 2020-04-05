@@ -74,3 +74,9 @@ Foo\Bar => DNAFactory\Module001\Api\Data\Foo\BarInterface
 `bin/magento dna:make:db-schema VendorName_ModuleName`
 
 Insert a table name and nothing else
+
+### Generate a Seeder (class that put stuff in table)
+
+`bin/magento dna:make:seeder VendorName_ModuleName`
+
+Insert a seeder name and nothing else

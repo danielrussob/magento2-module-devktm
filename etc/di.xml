@@ -8,6 +8,7 @@
                 <item name="dnafactory_ktm_command_generateobserver" xsi:type="object">DNAFactory\DevKtm\Command\ObserverGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generatedataobject" xsi:type="object">DNAFactory\DevKtm\Command\DataObjectGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generatedbschema" xsi:type="object">DNAFactory\DevKtm\Command\DbSchemaGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generateseeder" xsi:type="object">DNAFactory\DevKtm\Command\SeederGeneratorCommand</item>
             </argument>
         </arguments>
     </type>
