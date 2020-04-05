@@ -1,6 +1,7 @@
+- menu
+- controller / admincontroller
 - eav
 - triad
-- config
 - pub / sub
 - Rpository
 - CRUD
