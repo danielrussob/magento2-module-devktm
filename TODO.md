@@ -2,7 +2,6 @@
 - triad
 - config
 - pub / sub
-- Management
 - Rpository
 - CRUD
 - AddressField

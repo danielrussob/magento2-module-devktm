@@ -3,6 +3,8 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
+                <item name="dnafactory_ktm_command_meaningoflife" xsi:type="object">DNAFactory\DevKtm\Command\MeaningOfLifeCommand</item>
+
                 <item name="dnafactory_ktm_command_generatemodule" xsi:type="object">DNAFactory\DevKtm\Command\ModuleGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generatecommand" xsi:type="object">DNAFactory\DevKtm\Command\CommandGeneratorCommand</item>
                 <item name="dnafactory_ktm_command_generateobserver" xsi:type="object">DNAFactory\DevKtm\Command\ObserverGeneratorCommand</item>

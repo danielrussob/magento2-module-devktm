@@ -13,6 +13,12 @@
 Written for Magento >= 2.3
 Default path are app/code but if module are installed, with VendorName_ModuleName syntax KTM will place generated code in base path of given module
 
+### Ask for a meaning of life
+
+`bin/magento dna:meaning-of-life`
+
+and nothing else...
+
 ### Generate a magento 2 module
 
 `bin/magento dna:make:module VendorName_ModuleName`
