@@ -68,3 +68,9 @@ Foo\Bar => DNAFactory\Module001\Api\Data\Foo\BarInterface
         DNAFactory\Module001\Data\Foo\Bar
 
 ... and so on!
+
+### Generate a Db Schema (table in database)
+
+`bin/magento dna:make:db-schema VendorName_ModuleName`
+
+Insert a table name and nothing else
