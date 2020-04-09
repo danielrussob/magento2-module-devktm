@@ -1,11 +1,10 @@
 <?php
 
-namespace DNAFactory\DevKtm\Command;
+namespace DNAFactory\DevKtm\Command\Generator;
 
 use DNAFactory\DevKtm\Generator\CommandGenerator;
 
 use DNAFactory\DevKtm\Generator\DbSchemaGenerator;
-use DNAFactory\DevKtm\Generator\SeederGenerator;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -13,20 +12,20 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\Question;
 
-class SeederGeneratorCommand extends AbstractGeneratorCommand
+class DbSchemaGeneratorCommand extends AbstractGeneratorCommand
 {
-    protected $name = "dna:make:seeder";
-    protected $description = "Generate a Seeder";
+    protected $name = "dna:make:db-schema";
+    protected $description = "Generate a DB Schema";
 
     /**
-     * @var SeederGenerator
+     * @var DbSchemaGenerator
      */
-    protected $seederGenerator;
+    protected $dbSchemaGenerator;
 
     public function __construct(
-        SeederGenerator $seederGenerator
+        DbSchemaGenerator $dbSchemaGenerator
     ) {
-        $this->seederGenerator = $seederGenerator;
+        $this->dbSchemaGenerator = $dbSchemaGenerator;
         parent::__construct();
     }
 
@@ -35,14 +34,14 @@ class SeederGeneratorCommand extends AbstractGeneratorCommand
         $moduleName = $input->getArgument(self::MODULE_NAME);
 
         $helper = $this->getHelper('question');
-        $question = new Question('Seeder name? [ExampleSeeder]', 'ExampleSeeder');
-        $seederName = $helper->ask($input, $output, $question);
+        $question = new Question('Table name? [nice_table]', 'nice_table');
+        $tableName = $helper->ask($input, $output, $question);
 
-        $this->seederGenerator->setIO($input, $output);
-        $this->seederGenerator->setModuleName($moduleName);
-        $this->seederGenerator->setSeederName($seederName);
+        $this->dbSchemaGenerator->setIO($input, $output);
+        $this->dbSchemaGenerator->setModuleName($moduleName);
+        $this->dbSchemaGenerator->setTableName($tableName);
 
-        $this->seederGenerator->generate();
+        $this->dbSchemaGenerator->generate();
     }
 
     protected function getArguments()

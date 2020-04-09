@@ -5,15 +5,20 @@
             <argument name="commands" xsi:type="array">
                 <item name="dnafactory_ktm_command_meaningoflife" xsi:type="object">DNAFactory\DevKtm\Command\MeaningOfLifeCommand</item>
 
-                <item name="dnafactory_ktm_command_generatemodule" xsi:type="object">DNAFactory\DevKtm\Command\ModuleGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatecommand" xsi:type="object">DNAFactory\DevKtm\Command\CommandGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generateobserver" xsi:type="object">DNAFactory\DevKtm\Command\ObserverGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatedataobject" xsi:type="object">DNAFactory\DevKtm\Command\DataObjectGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatedbschema" xsi:type="object">DNAFactory\DevKtm\Command\DbSchemaGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generateseeder" xsi:type="object">DNAFactory\DevKtm\Command\SeederGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatedatapatch" xsi:type="object">DNAFactory\DevKtm\Command\DataPatchGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generatemanagement" xsi:type="object">DNAFactory\DevKtm\Command\ManagementGeneratorCommand</item>
-                <item name="dnafactory_ktm_command_generateconfiguration" xsi:type="object">DNAFactory\DevKtm\Command\ConfigurationGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatemodule" xsi:type="object">DNAFactory\DevKtm\Command\Generator\ModuleGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatecommand" xsi:type="object">DNAFactory\DevKtm\Command\Generator\CommandGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generateobserver" xsi:type="object">DNAFactory\DevKtm\Command\Generator\ObserverGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatedataobject" xsi:type="object">DNAFactory\DevKtm\Command\Generator\DataObjectGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatedbschema" xsi:type="object">DNAFactory\DevKtm\Command\Generator\DbSchemaGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generateseeder" xsi:type="object">DNAFactory\DevKtm\Command\Generator\SeederGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatedatapatch" xsi:type="object">DNAFactory\DevKtm\Command\Generator\DataPatchGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generatemanagement" xsi:type="object">DNAFactory\DevKtm\Command\Generator\ManagementGeneratorCommand</item>
+                <item name="dnafactory_ktm_command_generateconfiguration" xsi:type="object">DNAFactory\DevKtm\Command\Generator\ConfigurationGeneratorCommand</item>
+
+                <item name="dnafactory_ktm_command_clean_allfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanAllFoldersCommand</item>
+                <item name="dnafactory_ktm_command_clean_generatedfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanGeneratedFoldersCommand</item>
+                <item name="dnafactory_ktm_command_clean_staticfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanStaticFoldersCommand</item>
+                <item name="dnafactory_ktm_command_clean_varfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanVarFoldersCommand</item>
             </argument>
         </arguments>
     </type>

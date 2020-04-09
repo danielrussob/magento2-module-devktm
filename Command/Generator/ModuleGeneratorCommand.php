@@ -1,6 +1,6 @@
 <?php
 
-namespace DNAFactory\DevKtm\Command;
+namespace DNAFactory\DevKtm\Command\Generator;
 
 use DNAFactory\DevKtm\Generator\ModuleGenerator;
 

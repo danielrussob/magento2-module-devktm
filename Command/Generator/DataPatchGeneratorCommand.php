@@ -1,10 +1,11 @@
 <?php
 
-namespace DNAFactory\DevKtm\Command;
+namespace DNAFactory\DevKtm\Command\Generator;
 
 use DNAFactory\DevKtm\Generator\CommandGenerator;
 
 use DNAFactory\DevKtm\Generator\DbSchemaGenerator;
+use DNAFactory\DevKtm\Generator\DataPatchGenerator;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -12,20 +13,20 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\Question;
 
-class DbSchemaGeneratorCommand extends AbstractGeneratorCommand
+class DataPatchGeneratorCommand extends AbstractGeneratorCommand
 {
-    protected $name = "dna:make:db-schema";
-    protected $description = "Generate a DB Schema";
+    protected $name = "dna:make:data-patch";
+    protected $description = "Generate a Data Patch";
 
     /**
-     * @var DbSchemaGenerator
+     * @var DataPatchGenerator
      */
-    protected $dbSchemaGenerator;
+    protected $dataPatchGenerator;
 
     public function __construct(
-        DbSchemaGenerator $dbSchemaGenerator
+        DataPatchGenerator $dataPatchGenerator
     ) {
-        $this->dbSchemaGenerator = $dbSchemaGenerator;
+        $this->dataPatchGenerator = $dataPatchGenerator;
         parent::__construct();
     }
 
@@ -34,14 +35,14 @@ class DbSchemaGeneratorCommand extends AbstractGeneratorCommand
         $moduleName = $input->getArgument(self::MODULE_NAME);
 
         $helper = $this->getHelper('question');
-        $question = new Question('Table name? [nice_table]', 'nice_table');
-        $tableName = $helper->ask($input, $output, $question);
+        $question = new Question('Patch name? [ExamplePatch]', 'ExamplePatch');
+        $patchName = $helper->ask($input, $output, $question);
 
-        $this->dbSchemaGenerator->setIO($input, $output);
-        $this->dbSchemaGenerator->setModuleName($moduleName);
-        $this->dbSchemaGenerator->setTableName($tableName);
+        $this->dataPatchGenerator->setIO($input, $output);
+        $this->dataPatchGenerator->setModuleName($moduleName);
+        $this->dataPatchGenerator->setPatchName($patchName);
 
-        $this->dbSchemaGenerator->generate();
+        $this->dataPatchGenerator->generate();
     }
 
     protected function getArguments()

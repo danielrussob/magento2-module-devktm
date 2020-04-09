@@ -19,6 +19,15 @@ Default path are app/code but if module are installed, with VendorName_ModuleNam
 
 and nothing else...
 
+### Clean magento 2 folders
+
+`bin/magento dna:clean:all-folders`
+`bin/magento dna:clean:generated-folders`
+`bin/magento dna:clean:static-folders`
+`bin/magento dna:clean:var-folders`
+
+According to: https://devdocs.magento.com/guides/v2.3/howdoi/php/php_clear-dirs.html
+
 ### Generate a magento 2 module
 
 `bin/magento dna:make:module VendorName_ModuleName`

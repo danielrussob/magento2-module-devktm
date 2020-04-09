@@ -1,8 +1,13 @@
 - menu
 - controller / admincontroller
-- eav
+- eav attribute
+-- product
+-- category
+-- customer
+-- address
 - triad
 - pub / sub
 - Rpository
 - CRUD
 - AddressField
+- emailtemplates

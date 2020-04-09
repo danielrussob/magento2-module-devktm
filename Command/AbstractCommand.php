@@ -11,12 +11,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-abstract class AbstractGeneratorCommand extends Command
+abstract class AbstractCommand extends Command
 {
     protected $name;
     protected $description;
-
-    const MODULE_NAME = 'module-name';
 
     protected function configure()
     {
@@ -37,7 +35,7 @@ abstract class AbstractGeneratorCommand extends Command
     protected function getArguments()
     {
         return [
-            [self::MODULE_NAME, InputArgument::REQUIRED, 'The name of the module'],
+
         ];
     }
 
