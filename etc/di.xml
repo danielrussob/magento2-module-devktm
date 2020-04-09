@@ -19,6 +19,8 @@
                 <item name="dnafactory_ktm_command_clean_generatedfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanGeneratedFoldersCommand</item>
                 <item name="dnafactory_ktm_command_clean_staticfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanStaticFoldersCommand</item>
                 <item name="dnafactory_ktm_command_clean_varfolders" xsi:type="object">DNAFactory\DevKtm\Command\Clean\CleanVarFoldersCommand</item>
+
+                <item name="dnafactory_ktm_command_deploy_slowcoffee" xsi:type="object">DNAFactory\DevKtm\Command\Deploy\SlowCoffeeDeployCommand</item>
             </argument>
         </arguments>
     </type>

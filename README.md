@@ -28,6 +28,13 @@ and nothing else...
 
 According to: https://devdocs.magento.com/guides/v2.3/howdoi/php/php_clear-dirs.html
 
+### Shortcode for deploy dev
+
+`bin/magento dna:deploy:slow-coffee`
+
+Shortcode for 
+    dna:clean:all-folders + setup:upgrade + setup:di:compilec + cache:flush + dev:source-theme:deploy
+
 ### Generate a magento 2 module
 
 `bin/magento dna:make:module VendorName_ModuleName`
