@@ -2,6 +2,7 @@
   "name": "dnafactory/module-devktm",
   "type": "magento2-module",
   "description": "KTM Code Generator for Magento 2",
+  "keywords": ["Magento2"],
   "license": [
   ],
   "require": {
